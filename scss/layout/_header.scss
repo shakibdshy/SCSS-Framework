@@ -1,0 +1,62 @@
+/*----------------------------------------*/
+/*  02. Header Area
+/*----------------------------------------*/
+.header-area {
+    position: relative;
+    z-index: 99;
+}
+
+.maan-header-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--gutter-20) 0;
+}
+
+.maan-header-menu {
+    margin-left: auto;
+
+    .menu {
+        @include lg {
+            margin-right: var(--gutter-30);
+        }
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-item {
+        .nav-link {
+            font-size: var(--fs-16);
+            font-weight: var(--fw-600);
+            color: $black;
+            @include property;
+            padding: var(--gutter-10) var(--gutter-20);
+
+            @include hover {
+                color: $yellow;
+            }
+        }
+    }
+}
+
+.maan-header-right {
+    .maan-cart-icon {
+        margin: 0 var(--gutter-50);
+    }
+
+    .header-btn {
+        a {
+            display: flex;
+            align-items: center;
+        }
+
+        i {
+            line-height: 1;
+            @include property;
+        }
+    }
+}

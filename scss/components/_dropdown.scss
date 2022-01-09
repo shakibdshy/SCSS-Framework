@@ -1,0 +1,84 @@
+// Dropdown Menu
+.menu-dropdown {
+    position: relative;
+
+    .nav-link {
+        position: relative;
+    }
+
+    @include lg {
+        >.sub-menu {
+            @include absolute(top 100% left 0 right 0);
+            z-index: 9;
+            border-radius: 5px;
+            border: none;
+            display: block;
+            padding: 18px 0;
+            min-width: 270px;
+            background: #ffffff;
+            box-shadow: 0px 30px 70px 0px rgba(137, 139, 142, 0.15);
+            margin: 0;
+            transform: scale(1, 0);
+            transform-origin: 0 0;
+            @include property;
+            opacity: 0;
+            visibility: hidden;
+
+            li {
+                margin-left: 0;
+                text-align: left;
+
+                a {
+                    padding: rem(12px) var(--gutter-10) rem(12px) var(--gutter-25);
+                    font-family: var(--ff-poppins);
+                    font-weight: var(--fw-600);
+                    font-size: var(--fs-16);
+                    color: var(--clr-black-1);
+                    text-transform: capitalize;
+                    display: block;
+                    text-decoration: none;
+                    position: relative;
+                    @include property;
+
+                    @include hover {
+                        padding-left: var(--gutter-35);
+                        color: var(--clr-yellow);
+                        background: rgba(#F88808, 0.15);
+                    }
+                }
+            }
+
+            .menu-dropdown {
+                @include lg {
+                    @include pseudo(top 50% right 25px, $content: "\f105") {
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        font-size: var(--fs-16);
+                        color: var(--clr-black-1);
+                        transform: translateY(-50%);
+                        line-height: 1;
+                    }
+                }
+
+                @include hover {
+                    @include before {
+                        color: var(--clr-yellow);
+                    }
+                }
+
+                >.sub-menu {
+                    left: 100%;
+                    top: 0;
+                }
+            }
+        }
+
+        @include hover {
+            >.sub-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+        }
+    }
+}

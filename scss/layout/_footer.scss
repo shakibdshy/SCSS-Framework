@@ -1,0 +1,61 @@
+/*----------------------------------------*/
+/*  13. Footer Area
+/*----------------------------------------*/
+.footer-top {
+    padding-top: rem(70px);
+    padding-bottom: rem(60px);
+    border-bottom: 1px solid var(--clr-black-5);
+}
+
+.footer-info {
+    @include md {
+        margin-top: var(--gutter-30);
+    }
+
+    p {
+        color: var(--clr-white);
+        font-family: var(--ff-barlow);
+        font-size: var(--fs-16);
+        margin-top: var(--gutter-20);
+
+        @include xl {
+            width: 88%;
+        }
+    }
+}
+
+@include social(footer-social, $color: var(--clr-white), $h-color: var(--clr-yellow));
+
+.footer-social {
+    margin-top: var(--gutter-25);
+}
+
+.footer-menu {
+    margin-top: var(--gutter-50);
+
+    h5 {
+        font-size: var(--fs-18);
+        font-family: var(--ff-barlow);
+        font-weight: var(--fw-700);
+        color: var(--clr-white);
+        margin-bottom: var(--gutter-25);
+    }
+
+    ul {
+        @include footer-menu(var(--fs-16), $color: var(--clr-white), $h-color: var(--clr-yellow));
+
+        a {
+            font-family: var(--ff-barlow);
+        }
+    }
+}
+
+.footer-bottom {
+    padding: var(--gutter-20) 0;
+
+    p {
+        font-family: var(--ff-barlow);
+        color: var(--clr-black-7);
+        font-size: var(--fs-16);
+    }
+}

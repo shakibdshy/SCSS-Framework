@@ -1,0 +1,256 @@
+/*----------------------------------------*/
+/*  03. Banner Area
+/*----------------------------------------*/
+.maan-banner-area {
+    position: relative;
+    z-index: 1;
+    margin-top: rem(-100px);
+    background-color: rgba(#F88808, 0.12);
+
+    .shape {
+        @include absolute(bottom rem(38px) left rem(33px));
+        z-index: -1;
+    }
+
+    .shape2 {
+        @include absolute(bottom rem(33px) left 30%);
+        z-index: -1;
+    }
+
+    .maan-banner-content {
+        margin-top: rem(50px);
+
+        @include sm {
+            height: 430px;
+        }
+    }
+}
+
+.maan-banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 556px;
+
+    h2 {
+        font-family: var(--ff-poppins);
+        font-weight: var(--fw-700);
+    }
+
+    p {
+        font-family: var(--ff-poppins);
+        margin-top: var(--gutter-10);
+    }
+
+    &.banner-content-2 {
+        height: 540px;
+        justify-content: flex-end;
+        margin-bottom: var(--gutter-40);
+
+        @include sm {
+            height: 450px;
+        }
+
+        @include md {
+            max-width: 90%;
+        }
+
+        @include lg {
+            max-width: 100%;
+        }
+
+        h3 {
+            font-family: var(--ff-poppins);
+            font-size: rem(35px);
+        }
+
+        form {
+            @include md {
+                flex-wrap: nowrap;
+            }
+        }
+
+        .banner-search-form {
+            max-width: 410px;
+            flex: 0 0 auto;
+        }
+
+        .maan-banner-img {
+            @include xl {
+                width: 115%;
+            }
+        }
+    }
+}
+
+.maan-banner-form {
+    margin-top: var(--gutter-35);
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--gutter-20);
+    }
+
+    input {
+        font-size: var(--fs-14);
+        color: var(--clr-black-7);
+        border-color: transparent;
+        border-radius: rem(6px);
+        padding: rem(18px) rem(15px) rem(18px) rem(48px);
+        position: relative;
+
+        @include focus {
+            box-shadow: 0 0 0 0.2rem rgba(#F88808, 0.25);
+            border-color: transparent;
+        }
+    }
+
+    .banner-search-form {
+        position: relative;
+        flex: 0 0 auto;
+        width: 100%;
+
+        @include md {
+            max-width: 376px;
+        }
+
+        @include pseudo(top 50% left 1.25rem, $content: '\f3c5') {
+            transform: translateY(-50%);
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: var(--fs-20);
+            color: var(--clr-black-7);
+            z-index: 1;
+        }
+    }
+
+    .banner-search-date {
+        position: relative;
+        flex: 0 0 auto;
+        width: 100%;
+
+
+        @include sm {
+            width: 50%;
+        }
+
+        @include md {
+            width: 100%;
+            max-width: 210px;
+        }
+
+        input {
+            background: var(--clr-white);
+        }
+
+        .form-select {
+            font-family: var(--ff-poppins);
+            font-weight: var(--fw-500);
+            font-size: var(--fs-16);
+            color: var(--clr-black-2);
+            border-radius: rem(6px);
+            padding: rem(17px) rem(15px) rem(17px) rem(25px);
+            border-color: transparent;
+            position: relative;
+
+            @include focus {
+                box-shadow: 0 0 0 0.2rem rgba(#F88808, 0.25);
+                border-color: transparent;
+            }
+        }
+    }
+
+    .banner-search-button {
+        flex: 0 0 auto;
+
+        @include sm {
+            width: 46%;
+        }
+
+        @include md {
+            width: auto;
+        }
+
+        .btn {
+            max-height: rem(60px);
+            width: 100%;
+        }
+    }
+}
+
+.maan-banner-area {
+    .maan-banner-image {
+        position: relative;
+        animation: top-image-bounce 3s infinite ease-in-out;
+
+        img {
+            transform-style: preserve-3d;
+            max-width: 167%;
+            position: relative;
+
+            @include lg {
+                margin-top: 105px;
+                left: -110px;
+            }
+
+            @include xl {
+                max-width: 140%;
+            }
+
+            @include xxl {
+                max-width: 167%;
+                left: -40px;
+            }
+        }
+    }
+}
+
+
+.popup-model {
+    .modal-header {
+        border-bottom: none;
+        padding: 1.5rem;
+
+        .btn-close {
+            margin-left: 0;
+        }
+    }
+
+    .modal-body {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .pickup-time {
+        h3 {
+            font-size: var(--fs-36);
+            margin-bottom: var(--gutter-20);
+        }
+
+        .form-select {
+            font-family: var(--ff-poppins);
+            font-weight: var(--fw-500);
+            font-size: var(--fs-16);
+            color: var(--clr-black-2);
+            background-color: var(--clr-white-1);
+            border-radius: rem(3px);
+            padding: rem(15px) rem(15px) rem(15px) rem(25px);
+            border-color: transparent;
+            margin-top: var(--gutter-15);
+            cursor: pointer;
+        }
+    }
+
+    .modal-footer {
+        border-top: none;
+        margin-top: 0;
+        flex-direction: column;
+        gap: var(--gutter-15);
+        padding: 0 1.5rem 1.8rem;
+
+        .btn {
+            width: 100%;
+        }
+    }
+}
